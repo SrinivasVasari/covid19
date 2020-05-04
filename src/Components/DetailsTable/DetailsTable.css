@@ -1,0 +1,55 @@
+.dataTable {
+  width: 80%;
+  margin: 0 auto;
+}
+.table {
+  display: block;
+    width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.tableHeader {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  flex-wrap: nowrap;
+}
+.tableHeader span {
+  padding: 15px 10px;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-width: 1px 1px 1px 0px;
+  font-weight: bold;
+  background: #333;
+  min-width: 145px;
+  white-space: break-spaces;
+}
+.tableHeader span:first-child {
+  border-left: 1px solid #ccc;
+}
+.tableContent {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.tableContent:nth-child(odd) span {
+  background: rgba(242,242,242,0.5);
+}
+.tableContent span {
+  padding: 15px 10px;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-width: 0px 1px 0px 0px;
+  min-width: 145px;
+  white-space: break-spaces;
+}
+.tableContent span:first-child {
+  border-left: 1px solid #ccc;
+}
+.tableContent:last-child span {
+  border-bottom: 1px solid #ccc;
+}

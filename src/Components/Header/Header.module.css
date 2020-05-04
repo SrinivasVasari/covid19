@@ -1,0 +1,14 @@
+.headerContainer {
+    padding: 10px 0;
+    box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.1), 0 0px 0px -4px rgba(0, 0, 0, 0.1), 0 0px 0px 0 rgba(0, 0, 0, 0.07);
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: bold;
+    justify-content: center;
+}
