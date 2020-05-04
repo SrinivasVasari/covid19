@@ -2,7 +2,7 @@ import axios from "axios";
 
 const baseurl = "https://api.covid19api.com";
 
-export const fetchData = async (country) => {
+export const fetchData = async () => {
   let url = `${baseurl}/summary`;
   try {
     const { data } = await axios.get(url, {

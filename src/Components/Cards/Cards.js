@@ -5,8 +5,6 @@ const Cards = ({ global, date }) => {
   if (!global) {
     return <div>Loading...</div>;
   }
-  console.log("date", date);
-  console.log("date1", new Date(date).toDateString());
   const update = !date ? "" : new Date(date).toDateString();
   return (
     <Fragment>

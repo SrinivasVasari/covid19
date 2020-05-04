@@ -5,9 +5,6 @@ const DetailsTable = ({ countries, loading }) => {
   if (loading) {
     return <h2>Loading...</h2>;
   }
-
-  console.log("countryDetails", countries);
-
   const rowData = countries.map((country) => {
     const { Country, TotalConfirmed, TotalDeaths, TotalRecovered } = country;
     return (
