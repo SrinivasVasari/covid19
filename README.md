@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project API are used from https://api.covid19api.com and https://api.covid19india.org/state_district_wise.json
 
 ## Available Scripts
 

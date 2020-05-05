@@ -25,7 +25,7 @@ const Cards = ({ global, date }) => {
               <h2 className={styles.cardH}>{global.NewDeaths}</h2>
             </div>
           </div>
-          <div className={`${styles.card} ${styles.yellow}`}>
+          <div className={`${styles.card} ${styles.green}`}>
             <div className={styles.cardContent}>
               <p className={styles.cardP}>New Recovered</p>
               <h2 className={styles.cardH}>{global.NewRecovered}</h2>
@@ -45,7 +45,7 @@ const Cards = ({ global, date }) => {
               <h2 className={styles.cardH}>{global.TotalDeaths}</h2>
             </div>
           </div>
-          <div className={`${styles.card} ${styles.yellow}`}>
+          <div className={`${styles.card} ${styles.green}`}>
             <div className={styles.cardContent}>
               <p className={styles.cardP}>Total Recovered</p>
               <h2 className={styles.cardH}>{global.TotalRecovered}</h2>

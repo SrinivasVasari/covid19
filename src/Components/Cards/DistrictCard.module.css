@@ -11,8 +11,8 @@
 .card {
   border: 1px solid #ccc;
   padding: 10px 20px;
-  min-width: 30%;
-  margin: 14px 18px;
+  min-width: 24%;
+  margin: 14px 5px;
   border-radius: 5px;
   box-sizing: border-box;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -55,29 +55,29 @@
   color: #d84315;
 }
 .date {
-    text-align: center;
-    font-weight: bold;
-    margin: 20px 0 10px;
-    font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  font-size: 16px;
 }
 .date span {
-    font-weight: 400;
-    font-size: 14px;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 @media only screen and (min-width: 1024px) {
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .card {
-    margin: 14px 13px;
+    margin: 14px 5px;
   }
 }
 @media only screen and (max-width: 767px) {
-    .dFlex {
-        flex-wrap: wrap;
-      }
-      .card {
-          margin: 10px 0;
-          width: 100%;
-      }
+  .dFlex {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 10px 0;
+    width: 100%;
+  }
 }

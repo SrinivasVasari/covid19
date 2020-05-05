@@ -13,7 +13,7 @@ const CountrySelect = ({ handleCountryChange, handleClick, countries }) => {
         );
       });
   return (
-    <div className={styles.selectContainer}>
+    <div className={styles.selectContainer} >
       <select
         className={styles.select}
         onChange={(e) => handleCountryChange(e.target.value)}

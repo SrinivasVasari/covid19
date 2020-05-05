@@ -1,13 +1,11 @@
 import React, { Fragment } from "react";
-import { fetchData } from "./Components/Services";
+import { fetchData, fetchStates } from "./Components/Services";
 import Cards from "./Components/Cards/Cards";
 import Header from "./Components/Header/Header";
 import CountrySelect from "./Components/CountrySelect/CountrySelect";
-import DetailsTable from "./Components/DetailsTable/DetailsTable";
-import { Pagination } from "./Components/Pagination/Pagination";
-import './App.css';
-// import "materialize-css/dist/css/materialize.min.css";
-// import M from "materialize-css/dist/js/materialize.min.js";
+import StateSelect from "./Components/StateSelect/StateSelect";
+import DistrictSelect from "./Components/DistrictSelect/DistrictSelect";
+import "./App.css";
 
 class App extends React.Component {
   state = {
@@ -20,14 +18,20 @@ class App extends React.Component {
     country: "",
     currentPage: 1,
     detailsPerPage: 25,
+    statewiseData: {},
+    districtData: {},
+    slectedState: "",
   };
 
   async componentDidMount() {
     const fetchedData = await fetchData();
+    const fetchedStateData = await fetchStates();
     this.setState({
       data: fetchedData,
+      statewiseData: fetchedStateData,
     });
   }
+
   handleClick = async () => {
     const fetchedData = await fetchData();
     this.setState({
@@ -46,9 +50,28 @@ class App extends React.Component {
       });
       let data = { ...this.state.data };
       data.Global = countryValue[0];
-      this.setState({ data, country: country });
+      this.setState({ data });
     }
   };
+  handleStateChange = async (state) => {
+    if (state === 'Gloabl') {
+      return <div>Please select State...</div>
+    }
+
+    const { statewiseData } = this.state;
+    const filteredData = Object.keys(statewiseData)
+      .filter((key) => state.includes(key))
+      .reduce((obj, key) => {
+        obj[key] = statewiseData[key];
+        return obj;
+      }, {});
+    this.setState({
+      districtData: filteredData,
+      slectedState: state,
+      loading: true,
+    });
+  };
+
   paginate = (e, pageNumber) => {
     e.preventDefault();
     this.setState({
@@ -60,7 +83,9 @@ class App extends React.Component {
       data: { Global, Countries },
       currentPage,
       detailsPerPage,
+      statewiseData,
     } = this.state;
+    const statesList = Object.keys(statewiseData);
     if (!Global) {
       return <div>loading...</div>;
     }
@@ -71,6 +96,7 @@ class App extends React.Component {
       indexOfFirstTable,
       indexOfLastTable
     );
+
     return (
       <Fragment>
         <div className="container">
@@ -82,12 +108,22 @@ class App extends React.Component {
               countries={Countries}
             />
             <Cards global={global} date={this.state.data.Date} />
-            <DetailsTable countries={currentDetailsPage} />
+            <StateSelect
+              statesList={statesList}
+              handleStateChange={this.handleStateChange}
+            />
+            <DistrictSelect
+              data={this.state.districtData}
+              loading={this.state.loading}
+              slectedState={this.state.slectedState}
+            />
+
+            {/* <DetailsTable countries={currentDetailsPage} />
             <Pagination
               detailsPerPage={detailsPerPage}
               totalDetails={Countries.length}
               paginate={this.paginate}
-            />
+            /> */}
           </div>
         </div>
       </Fragment>

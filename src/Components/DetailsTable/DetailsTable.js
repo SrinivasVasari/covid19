@@ -8,7 +8,7 @@ const DetailsTable = ({ countries, loading }) => {
   const rowData = countries.map((country) => {
     const { Country, TotalConfirmed, TotalDeaths, TotalRecovered } = country;
     return (
-      <div className="tableContent">
+      <div key={Country} className="tableContent">
         <span>{Country}</span>
         <span>{TotalConfirmed}</span>
         <span>{TotalDeaths}</span>

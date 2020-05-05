@@ -25,3 +25,24 @@ export const fetchCountries = async () => {
     return error;
   }
 };
+
+export const fetchStates = async () => {
+  // var requestOptions = {
+  //   method: 'GET',
+  //   redirect: 'follow'
+  // };
+  try {
+    const { data } = await axios.get("https://api.covid19india.org/state_district_wise.json");
+    return data;
+  } catch (error) {
+    return error;
+  }
+ 
+    // .then(response => response.json())
+    // .then(result => {
+    //   //const data = Object.values(result);
+    //   return result;
+    // })
+}
+
+
