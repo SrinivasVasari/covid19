@@ -10,8 +10,8 @@ const Header = () => {
           <span className={styles.inlineB}>
             <img
               className={styles.logo}
-              width="60"
-              height="60"
+              width="70"
+              height="67"
               src={process.env.PUBLIC_URL + "/logo-corona-small.png"}
               alt="logo"
             />

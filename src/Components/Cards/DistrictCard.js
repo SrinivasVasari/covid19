@@ -36,10 +36,3 @@ const DistrictCard = ({ info, loading }) => {
 };
 
 export default DistrictCard;
-
-// active: 50
-// confirmed: 78
-// deceased: 4
-// delta: {confirmed: 0, deceased: 0, recovered: 0}
-// notes: ""
-// recovered: 24

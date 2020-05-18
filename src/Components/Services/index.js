@@ -27,22 +27,12 @@ export const fetchCountries = async () => {
 };
 
 export const fetchStates = async () => {
-  // var requestOptions = {
-  //   method: 'GET',
-  //   redirect: 'follow'
-  // };
   try {
-    const { data } = await axios.get("https://api.covid19india.org/state_district_wise.json");
+    const { data } = await axios.get(
+      "https://api.covid19india.org/state_district_wise.json"
+    );
     return data;
   } catch (error) {
-    return error;
+    console.log(error);
   }
- 
-    // .then(response => response.json())
-    // .then(result => {
-    //   //const data = Object.values(result);
-    //   return result;
-    // })
-}
-
-
+};

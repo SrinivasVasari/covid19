@@ -81,8 +81,6 @@ class App extends React.Component {
   render() {
     const {
       data: { Global, Countries },
-      currentPage,
-      detailsPerPage,
       statewiseData,
     } = this.state;
     const statesList = Object.keys(statewiseData);
@@ -90,12 +88,6 @@ class App extends React.Component {
       return <div>loading...</div>;
     }
     const global = !Global ? "loading..." : Global;
-    const indexOfLastTable = currentPage * detailsPerPage;
-    const indexOfFirstTable = indexOfLastTable - detailsPerPage;
-    const currentDetailsPage = Countries.slice(
-      indexOfFirstTable,
-      indexOfLastTable
-    );
 
     return (
       <Fragment>
@@ -117,13 +109,6 @@ class App extends React.Component {
               loading={this.state.loading}
               slectedState={this.state.slectedState}
             />
-
-            {/* <DetailsTable countries={currentDetailsPage} />
-            <Pagination
-              detailsPerPage={detailsPerPage}
-              totalDetails={Countries.length}
-              paginate={this.paginate}
-            /> */}
           </div>
         </div>
       </Fragment>
