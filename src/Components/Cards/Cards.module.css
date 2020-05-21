@@ -10,7 +10,7 @@
 }
 .card {
   border: 1px solid #ccc;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   min-width: 30%;
   margin: 14px 18px;
   border-radius: 5px;
@@ -25,25 +25,36 @@
   margin-right: 0;
 }
 .cardP {
-  margin: 5px 0 10px;
+  margin: 0px 0 10px;
+  padding: 10px 20px;
 }
 .cardH {
+  padding: 10px 20px;
   margin: 10px 0 20px;
 }
 .green {
   border-left: 5px solid #8bc34a;
+  background: #c5e1a5;
+  color: #689f38;
+  font-weight: bold;
 }
 .blue {
   border-left: 5px solid #1565c0;
+  background: #cae8f7;
+  color: #1565c0;
+  font-weight: bold;
 }
 .yellow {
   border-left: 5px solid #fdd835;
 }
 .red {
   border-left: 5px solid #d84315;
+  background: #ffab91;
+  color: #bf360c;
+  font-weight: bold;
 }
 .green .cardH {
-  color: #8bc34a;
+  color: #689f38;
 }
 .blue .cardH {
   color: #1565c0;
@@ -52,17 +63,26 @@
   color: #fdd835;
 }
 .red .cardH {
-  color: #d84315;
+  color: #bf360c;
 }
 .date {
-    text-align: center;
-    font-weight: bold;
-    margin: 20px 0 10px;
-    font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  font-size: 16px;
 }
 .date span {
-    font-weight: 400;
-    font-size: 14px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.bStrip {
+  background: #4DD0E1;
+}
+.rStrip {
+  background: #FF8A65;
+}
+.gStrip {
+  background: #AED581;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -71,11 +91,11 @@
   }
 }
 @media only screen and (max-width: 767px) {
-    .dFlex {
-        flex-wrap: wrap;
-      }
-      .card {
-          margin: 10px 0;
-          width: 100%;
-      }
+  .dFlex {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 10px 0;
+    width: 100%;
+  }
 }

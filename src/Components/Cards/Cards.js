@@ -15,19 +15,19 @@ const Cards = ({ global, date }) => {
         <div className={styles.dFlex}>
           <div className={`${styles.card} ${styles.blue}`}>
             <div className={styles.cardContent}>
-              <p className={styles.cardP}>New Confirmed</p>
+              <p className={`${styles.cardP} ${styles.bStrip}`}>New Confirmed</p>
               <h2 className={styles.cardH}>{global.NewConfirmed}</h2>
             </div>
           </div>
           <div className={`${styles.card} ${styles.red}`}>
             <div className={styles.cardContent}>
-              <p className={styles.cardP}>New Deaths</p>
+              <p className={`${styles.cardP} ${styles.rStrip}`}>New Deaths</p>
               <h2 className={styles.cardH}>{global.NewDeaths}</h2>
             </div>
           </div>
           <div className={`${styles.card} ${styles.green}`}>
             <div className={styles.cardContent}>
-              <p className={styles.cardP}>New Recovered</p>
+              <p className={`${styles.cardP} ${styles.gStrip}`}>New Recovered</p>
               <h2 className={styles.cardH}>{global.NewRecovered}</h2>
             </div>
           </div>
@@ -35,19 +35,19 @@ const Cards = ({ global, date }) => {
         <div className={styles.dFlex}>
           <div className={`${styles.card} ${styles.blue}`}>
             <div className={styles.cardContent}>
-              <p className={styles.cardP}>Total Confirmed</p>
+              <p className={`${styles.cardP} ${styles.bStrip}`}>Total Confirmed</p>
               <h2 className={styles.cardH}>{global.TotalConfirmed}</h2>
             </div>
           </div>
           <div className={`${styles.card} ${styles.red}`}>
             <div className={styles.cardContent}>
-              <p className={styles.cardP}>Total Deaths</p>
+              <p className={`${styles.cardP} ${styles.rStrip}`}>Total Deaths</p>
               <h2 className={styles.cardH}>{global.TotalDeaths}</h2>
             </div>
           </div>
           <div className={`${styles.card} ${styles.green}`}>
             <div className={styles.cardContent}>
-              <p className={styles.cardP}>Total Recovered</p>
+              <p className={`${styles.cardP} ${styles.gStrip}`}>Total Recovered</p>
               <h2 className={styles.cardH}>{global.TotalRecovered}</h2>
             </div>
           </div>
