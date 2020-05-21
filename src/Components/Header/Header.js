@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <Fragment>
+    <>
       <div className={styles.headerContainer}>
         <div className={styles.logo}>
           <span className={styles.inlineB}>C</span>
@@ -19,7 +19,7 @@ const Header = () => {
           <span className={styles.inlineB}>VID - 19</span>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 

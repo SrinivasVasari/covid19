@@ -6,7 +6,7 @@ const DistrictCard = ({ info, loading }) => {
     return <div>Please Select District...</div>;
   }
   return (
-    <div className={styles.dFlex}>
+    <div className={`${styles.dFlex} flex-container`}>
       <div className={`${styles.card} ${styles.yellow}`}>
         <div className={styles.cardContent}>
           <p className={styles.cardP}>Active Cases</p>

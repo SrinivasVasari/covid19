@@ -3,6 +3,7 @@ import styles from "../CountrySelect/CountrySelect.module.css";
 
 const StateSelect = (props) => {
   const { statesList, handleStateChange } = props;
+  
   let states = !statesList
     ? "loading..."
     : statesList.length > 0 &&

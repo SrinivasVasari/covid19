@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styles from "./Cards.module.css";
 
 const Cards = ({ global, date }) => {
@@ -7,7 +7,7 @@ const Cards = ({ global, date }) => {
   }
   const update = !date ? "" : new Date(date).toDateString();
   return (
-    <Fragment>
+    <>
       <div className={styles.container}>
         <div className={styles.date}>
           <span>Last Updated By:</span> {update}
@@ -53,7 +53,7 @@ const Cards = ({ global, date }) => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 

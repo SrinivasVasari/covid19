@@ -8,20 +8,23 @@ import DistrictSelect from "./Components/DistrictSelect/DistrictSelect";
 import "./App.css";
 
 class App extends React.Component {
-  state = {
-    loading: false,
-    data: {
-      Countries: [],
-      Date: "",
-      Global: {},
-    },
-    country: "",
-    currentPage: 1,
-    detailsPerPage: 25,
-    statewiseData: {},
-    districtData: {},
-    slectedState: "",
-  };
+  constructor() {
+    super();
+    this.state = {
+      loading: false,
+      data: {
+        Countries: [],
+        Date: "",
+        Global: {},
+      },
+      country: "",
+      currentPage: 1,
+      detailsPerPage: 25,
+      statewiseData: {},
+      districtData: {},
+      slectedState: "",
+    };
+  }
 
   async componentDidMount() {
     const fetchedData = await fetchData();
@@ -54,8 +57,8 @@ class App extends React.Component {
     }
   };
   handleStateChange = async (state) => {
-    if (state === 'Gloabl') {
-      return <div>Please select State...</div>
+    if (state === "Gloabl") {
+      return <div>Please select State...</div>;
     }
 
     const { statewiseData } = this.state;

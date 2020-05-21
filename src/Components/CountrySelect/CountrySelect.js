@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CountrySelect.module.css";
 
-const CountrySelect = ({ handleCountryChange, handleClick, countries }) => {
+const CountrySelect = ({ handleCountryChange, countries }) => {
   let countriesList = !countries
     ? "loading..."
     : countries.length > 0 &&
